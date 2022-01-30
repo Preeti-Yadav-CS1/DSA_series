@@ -1,0 +1,20 @@
+# cook your dish here
+t=int(input())
+for i in range(t):
+    s= input()
+    n= int(len(s)//2)
+    s1= s[:n]
+    if (len(s)%2==0):
+        s2= s[n:]
+    else:
+        s2= s[n+1:]
+    flag = True
+    for i in s1:
+       a = s1.count(i)
+       b = s2.count(i)
+       if (a!=b):
+           flag = False
+    if (flag== True):
+        print("YES")
+    else:
+        print("NO")
